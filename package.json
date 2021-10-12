@@ -1,0 +1,47 @@
+{
+  "name": "sample-graphql-mock-server-with-apollo",
+  "version": "1.0.0",
+  "dependencies": {
+    "apollo-server": "^3.4.0",
+    "graphql": "^15.6.1",
+    "node": "^16.10.0"
+  },
+  "scripts": {
+    "start": "node dist/index",
+    "start:dev": "ts-node src/index",
+    "build": "tsc -p .",
+    "typesync": "typesync"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.10.3",
+    "@types/prettier": "^2.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1",
+    "simple-git-hooks": "^2.6.1",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.3",
+    "typesync": "^0.8.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write --loglevel=error",
+      "eslint --fix --quiet"
+    ],
+    "src/**/*.{css,less,sass,scss}": [
+      "stylelint --fix --quiet"
+    ],
+    "{public,src}/**/*.{html,gql,graphql,json}": [
+      "prettier --write --loglevel=error"
+    ]
+  }
+}
