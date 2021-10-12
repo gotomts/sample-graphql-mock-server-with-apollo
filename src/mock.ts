@@ -5,6 +5,7 @@ const typeDefs = gql`
   type Person {
     name: String
     age: Int
+    friends: [Int]
   }
 
   type Query {
@@ -36,6 +37,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   mocks,
+  mockEntireSchema: false,
 });
 
 server.listen().then(({ url }) => {
