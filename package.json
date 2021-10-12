@@ -7,8 +7,8 @@
     "node": "^16.10.0"
   },
   "scripts": {
-    "start": "node dist/main",
-    "start:dev": "ts-node src/main",
+    "start": "node dist/index",
+    "start:dev": "ts-node src/index",
     "build": "tsc -p .",
     "typesync": "typesync"
   },
