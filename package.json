@@ -2,6 +2,8 @@
   "name": "sample-graphql-mock-server-with-apollo",
   "version": "1.0.0",
   "dependencies": {
+    "apollo-server": "^3.4.0",
+    "graphql": "^15.6.1",
     "node": "^16.10.0"
   },
   "scripts": {
